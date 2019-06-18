@@ -17,6 +17,11 @@ services:
     depends_on:
       - db
 
+  composer:
+    build: ./composer
+    volumes:
+      - ./www/html:/var/www/html
+
   db:
     image: mysql:5.7
     ports:
